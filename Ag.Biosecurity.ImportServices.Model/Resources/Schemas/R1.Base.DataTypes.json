@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "Coding" : {
+      "type": "object",
+      "description": "The Coding datatype is a representation of a defined concept using a symbol from a defined 'code system'.",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "description": "The Name attribute captures a user-friendly single (camel-case) word describing the code."
+        },
+        "Code": {
+          "type": "string",
+          "description": "The Code attribute captures the 'Symbol' in syntax defined by the system."
+        },
+        "CodeSystem": {
+          "type": "string",
+          "description": "The CodeSystem attribute identifies the system of the terminology."
+        },
+        "CodeVersion": {
+          "type": "string",
+          "description": "The CodeVersion attribute details the version of the system - if relevant."
+        },
+        "Text": {
+          "type": "string",
+          "description": "The Text attribute encapsulates a representation defined by the system."
+        },
+        "LongCode": {
+          "type": "string",
+          "description": "The LongCode attribute encapsulates a representation defined by the system."
+        },
+        "LegacyGuid": {
+          "type": "string",
+          "description": "The LegacyGuid attribute encapsulates a reference value for the type instance as managed/stored within the BIIS framework."
+        }
+      },
+      "required": ["Code", "CodeSystem", "CodeVersion"],
+      "additionalProperties": false
+    },
+    "DataTypeMetadata" : {
+      "type": "object",
+      "properties": {
+        "CreationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "UpdateDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "UpdatedBy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "EffectiveDateTime" : {  
+      "description": "EffectiveDateTime: Provides a temporal constraint to an attribute or class - bounded by the StartDate and EndDate. The times are inclusive of the bounding instants.",
+      "type": "object",
+      "properties": {
+        "StartDate": {
+          "description": "The starting instant of the effective period. The instant is INCLUDED within the effective period.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "EndDate": {
+          "description" : "The ending instant of the effective period. The instant is INCLUDED within the effective period.",
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "Name": "QuarantineEntryId",
+  "Code": "QUARANTINE_ENTRY_ID",
+  "CodeSystem": "https://aff.gov.au/imports/iccp/codesets/import-declaration-entry-identifier-type",
+  "CodeVersion": "1.0.0",
+  "Text": "Import Declaration Entry Identifier Type - Quarantine Entry Id",
+  "LongCode": "ImportDeclarationEntryIdentifierType.QuarantineEntryId",
+  "LegacyGuid": ""
+}
